@@ -1,0 +1,16 @@
+<div class="card-wrap"
+(mousemove)="handleMouseMove($event)"
+(mouseenter)="handleMouseEnter()"
+(mouseleave)="handleMouseLeave()"
+#cardRef>
+<div class="card" [ngStyle]="cardStyle">
+  <div class="card-bg" [ngStyle]="cardBgTransform" [ngStyle]="cardBgImage"></div>
+  <div class="card-info">
+    <ng-content select="[slot=header]"></ng-content>
+    <ng-content select="[slot=content]"></ng-content>
+    <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+        Read More
+      </a>
+  </div>
+</div>
+</div>
