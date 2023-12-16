@@ -11,5 +11,4 @@ import { CarousellComponent } from '../../Carousel/carousel/carousel.component';
   styleUrl: './boddy.component.css'
 })
 export class BoddyComponent {
-
 }
