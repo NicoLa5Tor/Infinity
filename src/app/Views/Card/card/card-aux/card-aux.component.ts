@@ -22,7 +22,7 @@ export class CardAuxComponent {
   mouseLeaveDelay: any;
 
   ngAfterViewInit() {
-    console.log("EL dato ses: ",this.dataImage)
+
     this.width = this.cardRef.nativeElement.offsetWidth;
     this.height = this.cardRef.nativeElement.offsetHeight;
   }

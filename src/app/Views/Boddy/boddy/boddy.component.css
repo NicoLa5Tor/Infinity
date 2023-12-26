@@ -13,16 +13,32 @@
 
 
 }
-.container{
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 255, 0.722);
-    inline-size: 200%;
-    min-block-size: 20vh;
-    max-block-size: max-content;
-    z-index: 4;
+.text-an{
+    position: absolute;
 }
-.sep{
+.lin{
+    position: relative;
+    block-size: 4px ;
+    background: linear-gradient(to right,#ff4ab3 8%,#7ff 24%,#fcd246 46%,#9ffe00 75%,#417efd 93%) ;
+}
+
+.titl, .lin, .sep{
     inline-size: 100%;
-    block-size: 4vh;
-    background: linear-gradient(to bottom, #95a5a6c1,#311b9296,#311b9268,transparent)
+    position: relative;
+    inset-block-start: -17px;
+}
+.titl{
+    block-size: 20vh;
+    background-color: #662549;
+
+
+}
+.sep{  
+    inset-block-start: -24px;
+    block-size:max-content;
+    background-color: #662549;
+}
+.b{
+    justify-content: center;
+    block-size: 100%;
 }

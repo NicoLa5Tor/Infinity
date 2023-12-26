@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation,AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from '@coreui/angular';
 
@@ -12,30 +12,30 @@ import { CarouselModule } from '@coreui/angular';
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })
-export class CarousellComponent {
+export class CarousellComponent implements AfterViewInit {
 
-  constructor() {
-    if (typeof document !== 'undefined') {
+ngAfterViewInit(): void {
+  if (typeof document !== 'undefined') {
+      
+    if (document.querySelector('#container-slider')) {
+      setInterval(() => this.fntExecuteSlide("next"), 5000);
 
-      if (document.querySelector('#container-slider')) {
-        setInterval(() => this.fntExecuteSlide("next"), 6000);
-      }
+    }
 
-      if (document.querySelector('.listslider')) {
-        let link = document.querySelectorAll(".listslider li a");
-        link.forEach((link: Element) => {
-          link.addEventListener('click', (e: Event) => {
-            e.preventDefault();
-            let item = (link as HTMLElement).getAttribute('itlist') || '';
-            let arrItem = item.split("_");
-            this.fntExecuteSlide(arrItem[1]);
-            return false;
-          });
+    if (document.querySelector('.listslider')) {
+      let link = document.querySelectorAll(".listslider li a");
+      link.forEach((link: Element) => {
+        link.addEventListener('click', (e: Event) => {
+          e.preventDefault();
+          let item = (link as HTMLElement).getAttribute('itlist') || '';
+          let arrItem = item.split("_");
+          this.fntExecuteSlide(arrItem[1]);
+          return false;
         });
-      }
+      });
     }
   }
-
+}
   fntExecuteSlide(side: string | number) {
     if (typeof document !== 'undefined') {
       const parentTarget = document.getElementById('slider');

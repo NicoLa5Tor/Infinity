@@ -1,0 +1,38 @@
+
+.content{
+  inline-size: max-content;
+  block-size: max-content;
+}
+h1 {
+  display: flex;
+  position: relative;
+  padding: 0 0.0625em;
+  transform-style: preserve-3d;
+  font: 600 8vw Playfair Display;
+}
+h1::after {
+  position: absolute;
+  top: calc(50% - .5*0.125em);
+  right: 0;
+  width: calc(50% + 50vw);
+  height: 0.125em;
+  border-radius: 0 0.125em 0.125em 0;
+  background: crimson;
+  animation: slide 2s ease-out;
+  content: "";
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-100%);
+  }
+}
+.letter {
+  overflow: visible;
+  white-space: pre;
+  transform: rotatey(2deg) scalex(1.00061);
+}
+
+.rev {
+  transform: rotatey(-2deg) scalex(1.00061);
+}

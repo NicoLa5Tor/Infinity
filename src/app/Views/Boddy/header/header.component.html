@@ -1,14 +1,18 @@
 <div class="header">
     <div class="container-fluid px-0">
-        <header>
-            <div class="shape">
+        <header>     
+            <nav [ngClass]="{'scrolled': scrolled}" class="navbar fixed-top navbar-expand navbar-transparent block">
+             
+                <img src="../../../../assets/fondo.png" class="back-image fond1" [ngClass]="{'scroll': scrolled}" >
+                <img src="../../../../assets/fondo2.png" class="back-image fond2" [ngClass]="{'scroll': scrolled}">
 
-            </div> <!-- Navbar -->
-            <nav [ngClass]="{'scrolled': scrolled}" class="navbar fixed-top navbar-expand-lg navbar-transparent block">
-                <a class="navbar-brand" href="#"> INFINITY
-                </a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+                <app-nav-menu-tell class="nav-tel">
+            
+                </app-nav-menu-tell>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -34,6 +38,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li class="nav-item">
                             <div class="svg-wrapper">
                                 <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
@@ -69,10 +74,10 @@
                         </li>
                     </ul>
                 </div>
-            </nav> <!-- ./ end of navbar -->
+            </nav> <!-- ./ end of navbar
             <div class="container">
                 <div class="row">
-                    <!-- <div class="col-md-6 left-side"> <img src="" class="w-100"> </div> -->
+                     <div class="col-md-6 left-side"> <img src="" class="w-100"> </div> 
                     <div class="col-md-6 right-side">
                         <div class="text-primary">
                             <h1>INFINITY</h1>
@@ -86,7 +91,9 @@
                         </div>
                     </div>
                 </div>
+           
             </div>
+             -->
         </header>
     </div>
 </div>
