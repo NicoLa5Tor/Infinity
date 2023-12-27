@@ -60,7 +60,7 @@
 .main{
     margin-block-start: 3vh;
     padding-inline-start: 20%;
-    margin-block-end: 3vh;
+    margin-block-end: 10vh;
 	inline-size: 80%;
 	block-size: 70%;
 }
