@@ -10,5 +10,15 @@ import { BackWhiteComponent } from '../../Animations/back-white/back-white.compo
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  isActive = false;
+  cont = 0;
+  activate() {
+    this.cont ++;
+    if (this.cont % 2 == 0){
+      this.isActive = false;
+    }
+    else{
+      this.isActive = true;
+    }
+}
 }

@@ -1,31 +1,41 @@
-
 footer {
     color: #f3ebeb;
     inset-inline-start: 0%;
- /*   background-color: linear-gradient(to bottom, 
+    /*   background-color: linear-gradient(to bottom, 
     #7a2cbfa4,#4c1183a0 ,#2400469b, #10002b97,#0f002795);
    background-color: #0f002795;
   */
-  overflow-y: hidden;
-  overflow-x: hidden;
-  backdrop-filter: blur(50px);
-   background-color: #10002b;
- 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    backdrop-filter: blur(50px);
+    background-color: #10002b;
+
 }
+
 .title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.but:hover{
+
+.but:hover {
     transition: 1s;
     background: transparent;
 }
+
 .top {
     text-align: center;
     inline-size: 100%;
     block-size: 50px;
- /*   border: 1px solid #111;*/
+    /*   border: 1px solid #111;*/
 }
 
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-1 {
+    font-size: 40px;
+}
 
 
 
@@ -33,7 +43,88 @@ footer {
     inline-size: 100%;
     text-align: center;
 }
-.txt{
-    font-family: 'Allerta Stencil','Times New Roman', Times, serif;
+
+.txt {
+    font-family: 'Allerta Stencil', 'Times New Roman', Times, serif;
 
 }
+
+//-----Redes Sociales-------//
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+
+
+.container-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url('#goo');
+    margin-block-end: 60px;
+}
+.button {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(45deg,transparent,transparent);
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    transition: background 7s ease;
+
+  }
+  svg{
+   inline-size: 150px;
+   block-size: 10px;
+  }
+  .social {
+    opacity: 0;
+    position: relative;
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    i {
+     margin-top: 10px;
+    }
+    
+    a {
+      color: #FFF;
+    }
+  }
+  
+  .twitter {
+    background: #00aced;
+  }
+  
+  .facebook {
+    background: #3b5998;
+  }
+  
+  .google {
+    background: #dd4b39;
+  }
+  
+  .clicked {
+    opacity: 1;
+    transition: 1.2s all ease;
+    transform: translateY(56px);
+  }
+  .button:hover, .button.active{
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(45deg,#0d1439,#411c72,transparent,transparent, #411c72, #0d1439);
+
+  }
+  .twitter:hover,.facebook:hover, .google:hover{
+    cursor: pointer;
+  }

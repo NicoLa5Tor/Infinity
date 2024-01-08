@@ -1,0 +1,153 @@
+
+$transition-time: 2.3s;
+section{
+  inline-size: 100%;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: transparent;
+}
+@media  (max-width: 991px) {
+  section{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+.card{
+  border-radius: 20px;
+  background-color: transparent;
+  position: relative;
+  height: 300px;
+  width: 250px;
+  margin: 10px 0;
+  transition: ease all $transition-time;
+  perspective: 1200px;
+  &:hover{
+    .cover{
+      transform: rotateX(0deg) rotateY(-180deg);
+      &:before{
+        transform: translateZ(30px);
+      }
+      &:after{
+        background-color: black;
+      }
+      h4{
+        transform: translateZ(100px);
+      }
+      .price{
+        transform: translateZ(60px);
+      }
+      a{
+        transform: translateZ(-60px) rotatey(-180deg);
+      }
+    }
+  }
+  
+  .cover{
+    border-radius: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all $transition-time;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:before{
+      content: '';
+      position: absolute;
+      border: 5px solid rgba(255,255,255,.5);
+      box-shadow: 0 0 12px rgba(0,0,0,.3); 
+      top:20px;
+      left:20px;
+      right:20px;
+      bottom:20px;
+      z-index: 2;
+      transition: ease all $transition-time;
+      transform-style: preserve-3d;
+      transform: translateZ(0px);
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top:0px;
+      left:0px;
+      right:0px;
+      bottom:0px;
+      z-index: 2;
+      transition: ease all 1.3s;
+      background: rgba(0,0,0,.4);
+    }
+    &.item-a{
+      background-image: url('../../../../assets/img-infinity/salon.jpeg');
+    }
+    &.item-b{
+      background-image: url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80');
+    }
+    &.item-c{
+      background-image: url('https://images.unsplash.com/photo-1525945518069-b924046d1385?auto=format&fit=crop&w=600&q=80');
+    }
+    h4{
+      font-weight: 600;
+      position: absolute;
+      bottom: 55px;
+      left: 50px;
+      color: white;
+      transform-style: preserve-3d;
+      transition: ease all $transition-time;
+      z-index:3;
+      font-size: 3em;
+      transform: translateZ(0px);
+    }
+    .price{
+      font-weight: 200;
+      position: absolute;
+      top: 36px;
+      right: 40px;
+      color: white;
+      transform-style: preserve-3d;
+      transition: ease all $transition-time;
+      z-index:4;
+      font-size: 2em;
+      transform: translateZ(0px);
+    }
+  }
+  .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #2e1c3c,#2e1c3cab,transparent, transparent); /* Cambia el color y la opacidad según tus necesidades */
+    transform-style: preserve-3d;
+    transition: ease all $transition-time;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    a {
+      transform-style: preserve-3d;
+      transition: ease transform $transition-time, ease background .5s;
+      transform: translateZ(-1px) rotatey(-180deg);
+      background: transparent; /* Ajusta aquí también si es necesario */
+      border: 1px solid white;
+      font-weight: 200;
+      font-size: 1.3em;
+      color: white;
+      padding: 14px 32px;
+      outline: none;
+      text-decoration: none;
+  
+      &:hover {
+        background-color: #ffffff;
+        color: rgba(11, 15, 8, 0.8); /* Cambia el color según tus necesidades */
+      }
+    }
+  }
+
+  
+}
+img{
+  inline-size: 60%;
+  block-size: 50%;
+  position: absolute;
+}

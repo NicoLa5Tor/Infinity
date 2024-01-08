@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 @import 'bourbon';
+@import url("https://use.typekit.net/euz1eqv.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+ html{
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+ }

@@ -5,6 +5,7 @@
     height: 50%;
     position: absolute;
     padding-block-end: 50%;
+    pointer-events: none;
   }
 
 

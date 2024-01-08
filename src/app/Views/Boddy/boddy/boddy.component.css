@@ -13,6 +13,7 @@
 
 
 }
+
 .text-an{
     position: absolute;
 }
@@ -24,11 +25,6 @@
 	        animation: gradient 15s ease infinite;
 }
 
-.lin, .sep, .body{
-    inline-size: 100%;
-    position: relative;
-    inset-block-start: -17px;
-}
 .row{
     z-index: 2;
 }
@@ -42,6 +38,40 @@
     block-size:max-content;
     overflow-y: hidden;
     overflow-x: hidden;
+    padding-inline-start: 2vw;
+}
+.opaci, .agend{
+    inline-size: 100%;
+    block-size: 550px;
+    display: block;
+}
+.opaci{
+  background: linear-gradient(to right, #2e1c3c,#2e1c3cab,transparent, transparent);
+}
+.agend{
+    
+    background:linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)),url('../../../../assets/img-infinity/salon.jpeg');
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+@media  (max-width: 990px ) {
+    .agend, .opaci{
+        block-size: 450px;
+    }
+}
+.container{
+    inline-size: 100%;
+    block-size: 100%;
+
+}
+.cards{
+    min-block-size: 460px;
+    max-block-size: max-content;
+    inline-size: 100%;
+    background-color:  #1E1E1E;
+
 }
 
 @-webkit-keyframes gradient {
@@ -67,76 +97,51 @@
 		background-position: 0% 50%;
 	}
 }
+.location{
+    background-color: #969494;
+    inline-size: 100%;
+    block-size: max-content;
+    padding: 50px;
+}
+iframe{
+    padding: 20px;
+    border-radius: 5px;
+        -webkit-animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@media(max-width: 500px){
+    .location{
+        padding-inline-start: 0 !important;
+        padding-inline-end: 0;
+    }
+    iframe{
+        padding: 0;
+    }
+}
 
-/*lines */
-.lines {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    margin: auto;
-    width: 50%;
-    margin-left: 0%;
-  }
-  .lines .line {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-  }
-  .lines .line::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 15vh;
-    width: 100%;
-    top: -50%;
-    left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-    -webkit-animation: run 7s 0s infinite;
-            animation: run 7s 0s infinite;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-  }
-  .lines .line:nth-child(1) {
-    margin-left: -25%;
-  }
-  .lines .line:nth-child(1)::after {
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-  }
-  .lines .line:nth-child(3) {
-    margin-left: 25%;
-  }
-  .lines .line:nth-child(3)::after {
-    -webkit-animation-delay: 2.5s;
-            animation-delay: 2.5s;
-  }
-  
-  
-  @-webkit-keyframes run {
+
+/* ----------------------------------------------
+
+ */
+ @-webkit-keyframes shadow-inset-center {
     0% {
-      top: -50%;
+      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
     }
     100% {
-      top: 110%;
+      -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+              box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    }
+  }
+  @keyframes shadow-inset-center {
+    0% {
+      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+              box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
     }
   }
   
-  @keyframes run {
-    0% {
-      top: -50%;
-    }
-    100% {
-      top: 110%;
-    }
-  }
-  /*end lines*/
+  

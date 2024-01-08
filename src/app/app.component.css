@@ -1,3 +1,6 @@
 .bod{
     inset-block-start: 0%;
 }
+body{
+    overflow: hidden;
+}
