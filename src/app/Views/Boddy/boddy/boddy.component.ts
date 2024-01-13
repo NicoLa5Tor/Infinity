@@ -1,19 +1,33 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit,HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from '../../Card/card/card.component';
-import { TwoCardComponent } from '../../TwoCard/two-card/two-card.component';
-import { MarkComponent } from '../../mark/mark.component';
+import { TwoCardComponent } from '../../Card/two-card/two-card.component';
 import { TextAnComponent } from '../../Text-Animed/text-an/text-an.component';
 import { BubblesComponent } from '../../Animations/bubbles/bubbles.component';
 import { CarouselComponent } from '../../Carousel/carousel/carousel.component';
-
+import { ButtonPrincipalComponent } from '../../Animations/button-animed/button-principal/button-principal.component';
 @Component({
   selector: 'app-boddy',
   standalone: true,
-  imports: [CommonModule,CardComponent,TwoCardComponent, MarkComponent,TextAnComponent,BubblesComponent,CarouselComponent],
+  imports: [CommonModule,TwoCardComponent,TextAnComponent,BubblesComponent,CarouselComponent, ButtonPrincipalComponent],
   templateUrl: './boddy.component.html',
   styleUrl: './boddy.component.css',
+
 })
 export class BoddyComponent  {
+  scroll1 = false;
+  scroll2 = false;
+
+ 
+@HostListener('window:scroll',['$event'])
+onScroll(event : Event){
+  const intersection1 = document.getElementById('inter1')
+ 
+  if(intersection1 && event.target === intersection1)
+  {
+console.log('entra')
+  }
+
+}
+
 
 }

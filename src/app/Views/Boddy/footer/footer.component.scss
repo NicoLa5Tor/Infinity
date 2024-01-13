@@ -5,6 +5,7 @@ footer {
     #7a2cbfa4,#4c1183a0 ,#2400469b, #10002b97,#0f002795);
    background-color: #0f002795;
   */
+  background: #000;
     overflow-y: hidden;
     overflow-x: hidden;
     backdrop-filter: blur(50px);
@@ -52,7 +53,10 @@ footer {
 //-----Redes Sociales-------//
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
 
-
+.container{
+  display: flex !important;
+  justify-content: space-around !important;
+}
 .container-social {
     display: flex;
     justify-content: center;

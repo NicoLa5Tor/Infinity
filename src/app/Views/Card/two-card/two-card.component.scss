@@ -34,6 +34,9 @@ section{
       h4{
         transform: translateZ(100px);
       }
+      h5{
+        transform: translateZ(100px);
+      }
       .price{
         transform: translateZ(60px);
       }
@@ -92,12 +95,17 @@ section{
       position: absolute;
       bottom: 55px;
       left: 50px;
-      color: white;
+      color: rgba(255, 255, 255, 0.237);
       transform-style: preserve-3d;
       transition: ease all $transition-time;
       z-index:3;
       font-size: 3em;
       transform: translateZ(0px);
+    }
+    h4 p{
+      color: #ffffff;
+      font-weight: 400;
+      font-size: -4em;
     }
     .price{
       font-weight: 200;

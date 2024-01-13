@@ -1,18 +1,50 @@
+*{
+    font-family:'Raleway',sans-serif;
+
+}
 .boddy{
+    backdrop-filter: blur(5px);
     background-color:  #1E1E1E;
-    background-image: url('../../../../assets/fondo.png');
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed; 
-    object-fit: cover;
     inline-size: 100%;
     min-block-size: min-content;
     max-block-size: max-content;
     inset-inline-start: 0%;
     overflow: hidden;
-
-
 }
+
+.col2 p{
+    margin-block-start: 50px;
+  }
+.col1, .col2{
+    color: bisque;
+}
+.col1 p, .col2 p{
+    font-size: 3vh;
+    padding-inline-end: 20%;
+    padding-inline-start: 50px;
+}
+.col1 p{
+    font-size: 4vh;
+}
+.col1{
+    padding-block-start: 10vh ;
+}
+
+.articles{
+    inline-size: 100%;
+    background: linear-gradient(to bottom, #ffffff,#969494) ;
+    min-block-size: 150px;
+    max-block-size: max-content;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.im{
+    inline-size: 200px;
+    block-size: 100px;
+}
+
 
 .text-an{
     position: absolute;
@@ -20,7 +52,7 @@
 .lin{
     position: relative;
     block-size: 4px ;
-    background: linear-gradient(-45deg,#ff4ab3,#7ff ,#fcd246 ,#9ffe00 ,#417efd) ;
+    background: linear-gradient(to right,#37306B,#1e184c ,#fcd246 ,#9ffe00 ,#417efd) ;
     -webkit-animation: gradient 15s ease infinite;
 	        animation: gradient 15s ease infinite;
 }
@@ -30,7 +62,7 @@
 }
 .sep{  
     position: relative;
-    background: linear-gradient(-45deg,rgb(11, 126, 99),rgb(12, 160, 126), #ff3884b9, #ff0077bd,#ab49ccdf, #8e22bb,#7f00b2);
+    background: linear-gradient(to right bottom,rgb(11, 126, 99),rgb(12, 160, 126),#A91079,#570A57,#ab49ccdf, #8e22bb,#7f00b2);
 	background-size: 400% 400%;
 	-webkit-animation: gradient 15s ease infinite;
 	        animation: gradient 15s ease infinite;
@@ -38,11 +70,11 @@
     block-size:max-content;
     overflow-y: hidden;
     overflow-x: hidden;
-    padding-inline-start: 2vw;
 }
-.opaci, .agend{
+.opaci, .agend, .sep{
     inline-size: 100%;
-    block-size: 550px;
+    min-block-size: 500px;
+    max-block-size: max-content;
     display: block;
 }
 .opaci{
@@ -56,11 +88,7 @@
     background-position:center;
     background-repeat:no-repeat;
 }
-@media  (max-width: 990px ) {
-    .agend, .opaci{
-        block-size: 450px;
-    }
-}
+
 .container{
     inline-size: 100%;
     block-size: 100%;
@@ -70,7 +98,7 @@
     min-block-size: 460px;
     max-block-size: max-content;
     inline-size: 100%;
-    background-color:  #1E1E1E;
+    background: linear-gradient(to bottom,70% #1E1E1E,#969494) ;
 
 }
 
@@ -101,9 +129,10 @@
     background-color: #969494;
     inline-size: 100%;
     block-size: max-content;
-    padding: 50px;
+    padding-inline-end: 100px;
 }
 iframe{
+    margin: 50px;
     padding: 20px;
     border-radius: 5px;
         -webkit-animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -116,32 +145,35 @@ iframe{
     }
     iframe{
         padding: 0;
+        margin-inline-start: 0;
     }
 }
 
+@media(max-width: 450px){
 
-/* ----------------------------------------------
+    .col1 p,.col2 p{
+     font-size: 2vh;
+     padding-inline-end: 20%;
+    }
+    
 
- */
- @-webkit-keyframes shadow-inset-center {
-    0% {
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+}
+@media(max-width:991px){
+    .col2{
+      margin-block-start: -100px;
     }
-    100% {
-      -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-              box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    .col1{
+        padding-block-start: 5vh;
     }
-  }
-  @keyframes shadow-inset-center {
-    0% {
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    .agend, .opaci, .sep{
+        min-block-size: 400px;
+        max-block-size: max-content;
+
     }
-    100% {
-      -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-              box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    .col2 p{
+        margin-block-start: 0 !important;
     }
-  }
-  
-  
+
+}
+
+/*prueba 1*/
