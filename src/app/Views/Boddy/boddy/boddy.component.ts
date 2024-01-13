@@ -14,20 +14,5 @@ import { ButtonPrincipalComponent } from '../../Animations/button-animed/button-
 
 })
 export class BoddyComponent  {
-  scroll1 = false;
-  scroll2 = false;
-
- 
-@HostListener('window:scroll',['$event'])
-onScroll(event : Event){
-  const intersection1 = document.getElementById('inter1')
- 
-  if(intersection1 && event.target === intersection1)
-  {
-console.log('entra')
-  }
-
-}
-
 
 }
