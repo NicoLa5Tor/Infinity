@@ -4,6 +4,9 @@
 @import url("https://use.typekit.net/euz1eqv.css");
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 
+body{
+  inline-size: 100%;
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -14,3 +17,6 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

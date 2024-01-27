@@ -10,4 +10,5 @@ import { ButtonPrincipalComponent } from '../../Animations/button-animed/button-
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
+  
 }

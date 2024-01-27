@@ -1,0 +1,153 @@
+<div class="container">
+
+  <div class="text" data-aos="fade-down" data-aos-duration="1000">
+    <svg>
+      <defs>
+        <mask id="mask" x="0" y="0" width="100%" height="100%">
+          <!-- alpha rectangle -->
+          <!-- rectángulo alfa -->
+          <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+          <!-- All text that you want -->
+          <!-- Coloca todo el texto que necesites -->
+          <text id="title" x="50%" y="0" dy="1.88em">INFINITY</text>
+          <text id="subtitle" x="50%" y="0" dy="10.50em">--AGENDAR CITA--</text>
+        </mask>
+      </defs>
+      <!-- Apply color here! -->
+      <!-- Color aquí -->
+      <rect id="base" x="0" y="0" width="100%" height="100%" />
+    </svg>
+  </div>
+  <div class="cont-top">
+    <div class="col-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1D2B53" fill-opacity="1"
+          d="M0,192L26.7,176C53.3,160,107,128,160,117.3C213.3,107,267,117,320,133.3C373.3,149,427,171,480,165.3C533.3,160,587,128,640,117.3C693.3,107,747,117,800,133.3C853.3,149,907,171,960,192C1013.3,213,1067,235,1120,240C1173.3,245,1227,235,1280,202.7C1333.3,171,1387,117,1413,90.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+
+  </div>
+
+  <div class="form" id="bottom" data-aos="fade-right" data-aos-duration="800">
+    <div class="row sobre">
+      <div class="col-md-6 col-lg-6 mb-4 mb-md-0">
+        <div class="content-form blur">
+          <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+              <h2>AGENDA TU CITA</h2>
+            </div>
+            <div class="col-md-12">
+
+              <form style="overflow: hidden;">
+                <div class="mb-4 inp" data-aos="zoom-out-right">
+                  <mat-form-field appearance="outline" [color]="'accent'" id="input">
+                    <mat-label id="bage">Nombre Completo</mat-label>
+                    <input matInput style="color: aliceblue;">
+                  </mat-form-field>
+                </div>
+                <div class="mb-4 inp" data-aos="zoom-out-right">
+                  <mat-form-field appearance="outline" [color]="'accent'" id="input">
+                    <mat-label id="bage">Teléfono</mat-label>
+                    <input matInput style="color: aliceblue;">
+                  </mat-form-field>
+                </div>
+                <div class="mb-4 inp" data-aos="zoom-out-right">
+                  <mat-form-field appearance="outline" id="input" [color]="'accent'">
+                    <mat-label id="bage">Fecha de Cita</mat-label>
+                    <input matInput [matDatepicker]="picker" id="input">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker id="bage" touchUi #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="mb-4 inp" data-aos="zoom-out-right">
+                  <mat-form-field appearance="outline" id="input" [color]="'accent'">
+                    <mat-label id="bage">Hora de Cita</mat-label>
+                    <mat-select id="input">
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="mb-4 inp" data-aos="zoom-out-right">
+                  <mat-form-field appearance="outline" id="input" [color]="'accent'">
+                    <mat-label id="bage">Servicio</mat-label>
+                    <mat-select id="input">
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="btn" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                  <button class="space-btn">AGENDAR</button>
+                    
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 mb-4 mb-md-0 marg">
+        <div class="col-md-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <h2>
+            Visítanos
+          </h2>
+        </div>
+        <hr style="position: relative; margin-inline: 50px;">
+
+        <div class="content-iframe">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1ZAhEIrNjTWnObDX1yUpdS4wqg6juZL4&ehbc=2E312F"
+            width="100%" height="480" data-aos="zoom-out-down" data-aos-duration="1000"></iframe>
+        </div>
+        <section style="position: relative; margin: 50px;">
+          <h5 data-aos="zoom-out-left" data-aos-duration="">
+            INFINITY
+          </h5>
+
+          <hr data-aos="zoom-out-right">
+          <p data-aos="zoom-out-left">
+            SAN JUAN DE RIOSECO
+          </p>
+          <p style="font-weight: 100;" data-aos="zoom-out-left">
+            Cra. 4 #4-18
+          </p>
+          <p style="font-weight: 100;" data-aos="zoom-out-left">
+            Atendido por su propietaria
+          </p>
+          <p style="font-weight: 100;" data-aos="zoom-out-left">
+            Tel: 311 846 25 38
+          </p>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="cont-bottom" id="cont-bot">
+
+  </div>
+  <div class="ola-1" id="ola">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#10002b" fill-opacity="1"
+        d="M0,32L26.7,42.7C53.3,53,107,75,160,112C213.3,149,267,203,320,186.7C373.3,171,427,85,480,48C533.3,11,587,21,640,26.7C693.3,32,747,32,800,69.3C853.3,107,907,181,960,186.7C1013.3,192,1067,128,1120,133.3C1173.3,139,1227,213,1280,229.3C1333.3,245,1387,203,1413,181.3L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <div class="articles">
+
+    <a>
+      <img src="https://cosmeticosbelier.com/wp-content/uploads/2023/07/cosmeticos-belier-logo-negro.png" class="im"
+        data-aos="fade-up-right" data-aos-duration="1000" />
+    </a>
+    <a>
+      <img src="../../../../assets/img-infinity/organic.png" class="im" data-aos="fade-down" data-aos-duration="1000" />
+
+    </a>
+    <a>
+      <img src="//www.masglo.com/cdn/shop/files/logo-masglo.svg?v=17298397136868412346" class="im"
+        data-aos="fade-up-left" data-aos-duration="500" />
+    </a>
+  </div>
+</div>

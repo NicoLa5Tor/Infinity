@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button-principal',
@@ -9,15 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './button-principal.component.css'
 })
 export class ButtonPrincipalComponent {
-@Input() btn1 = false; 
-@Input() btn2 = false;
-@Input() btn3 = false;
-@Input() btn4 = false;
-@Input() text = "";
+  url = '/';
+  @Input() btn1 = false;
+  @Input() btn2 = false;
+  @Input() btn3 = false;
+  @Input() btn4 = false;
+  @Input() inUrl = "";
+  @Input() text = "";
+  constructor(private rout: Router) {
 
-onClick(){
-  setTimeout(()=>{
-  alert('espera un momento')
-  },1000)
-}
+   }
+  onClick() {
+  this.url += this.inUrl;
+  console.log("la url es: ",this.url);
+  this.rout.navigate([this.url])
+  }
+
 }
