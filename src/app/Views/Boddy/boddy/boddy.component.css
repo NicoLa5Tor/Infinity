@@ -1,13 +1,11 @@
-*{
-    font-family:'Raleway',sans-serif;
 
-}
 .boddy{
     backdrop-filter: blur(5px);
     background-color:  #1E1E1E;
     inline-size: 100%;
     min-block-size: min-content;
     max-block-size: max-content;
+    font-family: 'Raleway', sans-serif;;
     inset-inline-start: 0%;
     overflow: hidden;
 }
@@ -17,6 +15,10 @@
   }
 .col1, .col2{
     color: bisque;
+    white-space: rap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 6vh;
 }
 .col1 p, .col2 p{
     font-size: 3vh;
@@ -151,6 +153,7 @@ iframe{
     .col1 p,.col2 p{
      font-size: 2vh;
      padding-inline-end: 20%;
+     line-height: 4vh;
     }
     
 

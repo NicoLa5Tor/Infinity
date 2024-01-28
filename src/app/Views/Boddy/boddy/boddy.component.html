@@ -47,9 +47,12 @@
                         ¡Agenda ahora y vive la experiencia de
                         belleza infinita!"
                     </p>
-                    <app-button-principal [btn3]="true" [text]="'Agendar Cita'" [inUrl]="'agendCita'" >
+                    <div (click)="onIndex()">
+                        <app-button-principal    [btn3]="true" [text]="'Agendar Cita'" [inUrl]="'agendCita'">
 
-                    </app-button-principal>
+                        </app-button-principal>
+                    </div>
+                 
                 </div>
             </div>
         </div>

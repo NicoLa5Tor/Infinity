@@ -3,8 +3,8 @@
         <header>     
             <nav [ngClass]="{'scrolled': scrolled ,'exit': exit }"class="navbar fixed-top navbar-expand navbar-transparent block">
              
-                <img src="../../../../assets/fondo.png" class="back-image fond1" [ngClass]="{'scroll': scrolled}" >
-                <img src="../../../../assets/fondo2.png" class="back-image fond2" [ngClass]="{'scroll': scrolled}">
+                <img src="../../../../assets/fondo.png" class="back-image fond1" [ngClass]="{'scroll': scrolled}" (click)="onNavigate('/')" >
+                <img src="../../../../assets/fondo2.png" class="back-image fond2" [ngClass]="{'scroll': scrolled}" (click)="onNavigate('/')">
 
                 <app-nav-menu-tell class="nav-tel">
             
@@ -22,7 +22,7 @@
 
                                 </svg>
                                 <div id="text">
-                                    <a href=""><span class="spot"></span> INICIO</a>
+                                    <a (click)="onNavigate('/')"><span class="spot"></span> INICIO</a>
                                 </div>
                             </div>
 
@@ -34,7 +34,7 @@
 
                                 </svg>
                                 <div id="text">
-                                    <a href=""><span class="spot"></span> AGENDAR CITA</a>
+                                    <a (click)="onNavigate('agendCita')"><span class="spot"></span> AGENDAR CITA</a>
                                 </div>
                             </div>
                         </li>

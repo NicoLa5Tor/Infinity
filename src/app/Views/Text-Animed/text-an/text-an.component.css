@@ -1,6 +1,9 @@
 .focus-in-contract-bck{
         padding-block-start: 100px;
         padding-inline-start: 50px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        line-height: 10vh;
         font-size: 4em;
         font-weight: 500;
         color: beige;

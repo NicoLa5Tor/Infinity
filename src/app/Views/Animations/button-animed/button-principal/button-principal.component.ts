@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-button-principal',
   standalone: true,
@@ -17,12 +17,12 @@ export class ButtonPrincipalComponent {
   @Input() btn4 = false;
   @Input() inUrl = "";
   @Input() text = "";
-  constructor(private rout: Router) {
+  constructor(private rout: Router, private scroll : ViewportScroller) {
 
    }
   onClick() {
   this.url += this.inUrl;
-  console.log("la url es: ",this.url);
+  //console.log("la url es: ",this.url);
   this.rout.navigate([this.url])
   }
 

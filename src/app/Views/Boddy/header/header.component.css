@@ -5,7 +5,10 @@
   inline-size: 180px;
   block-size: 80px;
   z-index: 11;
-
+  cursor: pointer;
+}
+a{
+  cursor: pointer;
 }
 
 .position {
