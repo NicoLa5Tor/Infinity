@@ -1,0 +1,54 @@
+$height-mask: 250px;
+$darken: 50%;
+$color: #f9f5f5;
+$color-alpha: darken($color, $darken );
+$color-base: rgb(0, 0, 0);
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height-mask;
+    z-index: 10;
+    pointer-events: none;
+
+    svg {
+        z-index: 1;
+    }
+}
+svg {
+    width: 100%;
+    height: inherit;
+
+    text {
+        // svg center text.
+        // centar text svg.
+        text-anchor: middle;
+    }
+
+    #alpha {
+        fill: $color-alpha;
+        //animation: alpha 10s ease infinite;
+    }
+
+    #title {
+        letter-spacing: -2px;
+        font-size: 6em;
+        font-weight: 800;
+    }
+
+    #subtitle {
+        letter-spacing: 8px;
+        font-size: 1.2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        opacity: none;
+    }
+
+    #base {
+        fill: $color-base;
+        // add the mask.
+        // aplicar máscara.
+        mask: url(#mask);
+    }
+}

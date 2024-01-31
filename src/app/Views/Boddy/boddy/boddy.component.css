@@ -64,7 +64,8 @@
 }
 .sep{  
     position: relative;
-    background: linear-gradient(to right bottom,rgb(11, 126, 99),rgb(12, 160, 126),#A91079,#570A57,#ab49ccdf, #8e22bb,#7f00b2);
+    background-image: linear-gradient(to right bottom, #a91079, #990f74, #890e6e, #790d68, #6a0c61, #6b1167, #6c156c, #6d1972, #7d2587, #8d309d, #9c3cb4, #ab49cc);
+    background: linear-gradient(to right bottom,rgb(11, 126, 99),rgb(12, 160, 126),#A91079,#570A57,#ab49cc, #8e22bb,#7f00b2);
 	background-size: 400% 400%;
 	-webkit-animation: gradient 15s ease infinite;
 	        animation: gradient 15s ease infinite;

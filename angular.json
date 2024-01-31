@@ -37,11 +37,15 @@
           },
           "configurations": {
             "production": {
+              "sourceMap": true,
+              "allowedCommonJsDependencies": [
+                "aos"
+              ],
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -63,6 +67,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+            
               "buildTarget": "Infinity:build:production"
             },
             "development": {
@@ -94,7 +99,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../node_modules/scrollreveal/dist/scrollreveal.js"
+              "../node_modules/scrollreveal/dist/scrollreveal.js",
+              "./node_modules/aos/dist/aos.js"
             ]
           }
         }

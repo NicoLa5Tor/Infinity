@@ -1,20 +1,8 @@
 <div class="container">
 
-  <div class="text" data-aos="fade-down" data-aos-duration="1000">
-    <svg>
-      <defs>
-        <mask id="mask" x="0" y="0" width="100%" height="100%">
-       
-          <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-        
-          <text id="title" x="50%" y="0" dy="1.88em">INFINITY</text>
-          <text id="subtitle" x="50%" y="0" dy="10.50em">--AGENDAR CITA--</text>
-        </mask>
-      </defs>
-    
-      <rect id="base" x="0" y="0" width="100%" height="100%" />
-    </svg>
-  </div>
+  <app-svganimed [subTitle]="'AGENDAR CITA'">
+
+  </app-svganimed>
   <div class="cont-top">
     <div class="col-2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -79,7 +67,9 @@
                 <div class="btn" data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom">
                   <button class="space-btn">AGENDAR</button>
-                    
+                  <div id="wallet_container">
+
+                  </div>
                 </div>
               </form>
             </div>
@@ -96,7 +86,7 @@
 
         <div class="content-iframe">
           <iframe src="https://www.google.com/maps/d/embed?mid=1ZAhEIrNjTWnObDX1yUpdS4wqg6juZL4&ehbc=2E312F"
-            width="100%" height="480" data-aos="zoom-out-down" data-aos-duration="1000"></iframe>
+            width="100%"></iframe>
         </div>
         <section style="position: relative; margin: 50px;">
           <h5 data-aos="zoom-out-left" data-aos-duration="">
@@ -115,7 +105,9 @@
           </p>
           <p style="font-weight: 100;" data-aos="zoom-out-left">
             Tel: 311 846 25 38
+            
           </p>
+        
         </section>
       </div>
 

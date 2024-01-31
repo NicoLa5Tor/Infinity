@@ -8,6 +8,7 @@ import { ButtonPrincipalComponent } from '../../Animations/button-animed/button-
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+
 @Component({
   selector: 'app-boddy',
   standalone: true,
@@ -21,5 +22,6 @@ export class BoddyComponent  {
 onIndex(){
   this.scroll.scrollToPosition([0,0]);
 }
+
 
 }

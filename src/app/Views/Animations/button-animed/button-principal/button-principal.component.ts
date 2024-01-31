@@ -23,7 +23,11 @@ export class ButtonPrincipalComponent {
   onClick() {
   this.url += this.inUrl;
   //console.log("la url es: ",this.url);
-  this.rout.navigate([this.url])
+  this.scroll.scrollToPosition([0,0]);
+  setTimeout(()=>{
+    this.rout.navigate([this.url])
+
+  },1000)
   }
 
 }

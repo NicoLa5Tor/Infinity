@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AppComponent {
   constructor(private rout: Router) {
-    this.rout.navigate(['/inicio'])
+    this.rout.navigate(['/nosotros'])
   }
  
 }
