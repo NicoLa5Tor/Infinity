@@ -12,7 +12,9 @@ import Aos from 'aos';
 })
 export class NosotrosComponent implements AfterViewInit {
   ngAfterViewInit(): void {
+    if (typeof document !== 'undefined') {
       Aos.init();
+    }
   }
 
 }

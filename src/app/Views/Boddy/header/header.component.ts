@@ -4,6 +4,7 @@ import { HostListener } from '@angular/core';
 import { NavMenuTellComponent } from '../../Animations/nav-menu-tell/nav-menu-tell.component';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
@@ -34,6 +35,7 @@ onNavigate(dat : string){
   const url = '/' + dat;
   this.scroll.scrollToPosition([0,0]);
   setTimeout(()=>{
+    console.log("Redirige")
     this.rout.navigate([url]);
   },1000)
   }

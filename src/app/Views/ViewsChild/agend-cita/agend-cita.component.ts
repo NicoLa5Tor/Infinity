@@ -10,9 +10,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { ViewportScroller } from '@angular/common';
 import { SVGanimedComponent } from '../../Text-Animed/svganimed/svganimed.component';
+import { MercadoPagoService } from '../../../Services/mercado-pago.service';
 declare var MercadoPago: any;
 // @ts-ignore
 import Aos from 'aos';
+import { PreferenceModel } from '../../../Models/PreferenceModel';
+import { Callbacks } from 'jquery';
 
 
 @Component({
@@ -25,11 +28,12 @@ import Aos from 'aos';
 })
 export class AgendCitaComponent implements OnInit, AfterViewInit {
 
-  constructor(private scroll: ViewportScroller, private el: ElementRef) {
+  constructor(private scroll: ViewportScroller, private el: ElementRef, private _mercadoService: MercadoPagoService) {
 
   }
 
   ngOnInit(): void {
+    console.log("Entra")
     this.mercadoPago();
     this.onResize(null);
     setTimeout(() => {
@@ -64,14 +68,40 @@ export class AgendCitaComponent implements OnInit, AfterViewInit {
   }
 
   mercadoPago() {
-    const mp = new MercadoPago('TEST-1c42164c-abaa-4b73-87a6-dba8ad99d42f', {
-      locale: 'es-CO'
-    });
+    const model: PreferenceModel = {
+      title: 'Corte',
+      description: 'Es una prueba',
+      quantity: 1,
+      unitPrice: 35000,
+      eventDate: '31/01/2024'
+    }
+    console.log("el modelo es: ", model)
+    this._mercadoService.Preference(model).subscribe(
+      {
+        next: (data) => {
+          console.log('los DAtos son: ', data)
+          const mp = new MercadoPago('TEST-5180bd65-e4c4-422a-9ce9-5a8fdc5c9e8d', {
+            locale: 'es-CO'
+          });
 
-    mp.bricks().create("wallet", "wallet_container", {
-      initialization: {
-        preferenceId: "<PREFERENCE_ID>",
-      },
-    });
+          mp.bricks().create("wallet", "wallet_container", {
+            initialization: {
+              preferenceId: data.id,
+              redirectMode: "blank",
+            
+            },
+            customization: {
+              visual: {
+                buttonBackground: 'red',
+                borderRadius: '16px',
+              }
+            },
+            autoOpen: false
+          });
+
+        }, error: (e) => { console.log(e) }
+      }
+    )
+
   }
 }
